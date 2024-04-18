@@ -1,0 +1,144 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block banner_slider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="{% static 'app/images/banner/b1.jpg' %}" class="d-block w-100" alt="banner image" />
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/images/banner/b2.jpg' %}" class="d-block w-100" alt="banner image" />
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/images/banner/b3.jpg' %}" class="d-block w-100" alt="banner image" />
+        </div>
+        <div class="carousel-item">
+            <img src="{% static 'app/images/banner/b6.png' %}" class="d-block w-100" alt="banner image" />
+        </div>
+    </div>
+</div>
+{% endblock banner_slider %}
+
+{% block information %}
+<div class="container">
+    <div class="row bg-dark text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class="fs-5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta inventore ullam corporis! Quas perferendis
+            dolores deserunt facere velit earum architecto tempora? Dolorem obcaecati tenetur voluptatem? Neque ducimus
+            inventore aut totam.
+        </small>
+    </div>
+</div>
+{% endblock information %}
+
+
+{% block main-content %}
+    <div class="container">
+        <h2 class="text-center">ShadowPC Productos</h2>
+        <br><br>
+        <div class="row container">
+            <div class="col-md-4 col-sm4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec buttermilk smbg">
+                    <a href="{% url 'category' 'GPU' %}">
+                        <div class="goodnessseccont text-center">
+                            <img src="{% static 'app/images/product/rx6600.png' %}"
+                            class="img-responsive center-block" alt="">
+                            <p class="mlkpro">RX 6600</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec buttermilk curdbgpro">
+                    <a href="{% url 'category' 'CPU' %}">
+                        <div class="goodnessseccont text-center">
+                            <img src="{% static 'app/images/product/r5-5600x.png' %}"
+                            class="img-responsive center-block" alt="">
+                            <p class="mlkpro">Ryzen 5 5600X</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec buttermilk buttermilk">
+                    <a href="{% url 'category' 'GPU' %}">
+                        <div class="goodnessseccont text-center">
+                            <img src="{% static 'app/images/product/gtx1650.png' %}"
+                            class="img-responsive center-block" alt="">
+                            <p class="mlkpro">GTX 1650</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+
+        <br><br>
+
+        <div class="row container">
+            <div class="col-md-4 col-sm4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec buttermilk smbg">
+                    <a href="{% url 'category' 'MB' %}">
+                        <div class="goodnessseccont text-center">
+                            <img src="{% static 'app/images/product/asus-b550m.png' %}"
+                            class="img-responsive center-block" alt="">
+                            <p class="mlkpro">Asus B550-m</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec buttermilk curdbgpro">
+                    <a href="{% url 'category' 'SSD' %}">
+                        <div class="goodnessseccont text-center">
+                            <img src="{% static 'app/images/product/nvme-kingston.png' %}"
+                            class="img-responsive center-block" alt="">
+                            <p class="mlkpro">Nvme Kingston</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm4 mi-go wow fadeInUp"
+            data-wow-duration="1s" data-wow-delay="0.6s"
+            style="animation-duration: 1s; animation-delay: 0.6s;
+            animation-name: none;">
+                <div class="goodnesssec buttermilk buttermilk">
+                    <a href="{% url 'category' 'SSD' %}">
+                        <div class="goodnessseccont text-center">
+                            <img src="{% static 'app/images/product/patriot-viper.png' %}"
+                            class="img-responsive center-block" alt="">
+                            <p class="mlkpro">Patriot Viper</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <br/><br/>
+
+{% endblock main-content %}

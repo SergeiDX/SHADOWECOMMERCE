@@ -1,0 +1,42 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Dirección{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="text-center">
+        <h3>Bienvenido <span class="text-capitalize">{{request.user}}</span></h3>
+        </div>
+    <div class="col-sm-2 border-end">
+        <ul class="list-unstyled">
+            <li class="d-grid"><a href="{% url 'profile' %}" class="btn btn-primary">Mi perfil</a></li>
+            <li class="d-grid"><a href="{% url 'address' %}" class="btn">Dirección</a></li>
+        </ul>
+    </div>
+
+    <div class="col-sm-8 offset-sm-1">
+        <div class="row">
+            {% for ad in add %}
+                <div class="col-sm-6">
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h3>Dirección {{forloop.counter}}</h3>
+                            <p>Nombre: {{ad.name}}</p>
+                            <p>Colonia: {{ad.locality}}</p>
+                            <p>Telefono: {{ad.mobile}}</p>
+                            <p>Ciudad: {{ad.city}}</p>
+                            <p>Estado: {{ad.state}}</p>
+                            <p>CP: {{ad.zipcode}}</p>
+                            <p class="text-center"><a href="{% url 'updateAddress' pk=ad.id %}" type="button" class="btn btn-success">Actualizar</a></p>
+                            {% comment "" %}
+                            <!--<p class="text-center"><a href="{% url 'updateAddress' pk=ad.id %}" type="button" class="btn
+                            btn-success">Actualizar</a> </p> -->
+                            {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock main-content %}
